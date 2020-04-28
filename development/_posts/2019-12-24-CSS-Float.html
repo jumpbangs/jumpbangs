@@ -1,0 +1,58 @@
+--- 
+layout: post 
+title: "CSS Floats" 
+date: 2019-12-24 
+pagination: 
+enabled: true 
+category: development 
+---
+<p>
+    <strong>FLOAT</strong> is a CSS property that places an element on the left or right side of it's container. Which allows tex and inline elements to wrap around it. The property left and right usually tells the element on which side of the container
+    the following element must float on. This following CSS property was used before the implementation of flexbox which was introduced in CSS3.
+</p>
+
+<p>
+    The following reasons why I had looked into this was due to restriction that was given to me, during my internship where only the usage of CCS2 property was allowed. Thus, making me dive deep into floats as 
+    there were elements on the site pages where images had to be aligned side by side or in a similar format as CSS grid style. This would have been a walk in the park with the usage of CSS frameworks such as 
+    <a href="https://getbootstrap.com/">Bootstrap</a> or <a href="https://bulma.io/">Bluma</a> but usages of such framework was restricted hence the vinalla CSS route.
+</p>
+
+<p>
+    Before we start we need to know and understand how does applying <mark><em>Float : right & left</em></mark>, the following figures would showcase how each property when applied would display the following element 
+    on a webpage. However for align items in the middle of the page, the CSS property given to that following element would be <code>margin: 0 auto</code>.
+    <img src="{{ 'assets/img/css-float/float-left-min.png' | relative_url }}" alt="float-left-min.png" class="img-thumbnail">
+    <img src="{{ 'assets/img/css-float/centre-align-min.png' | relative_url }}" alt="centre-align-min.png" class="img-thumbnail">
+    <img src="{{ 'assets/img/css-float/float-right-min.png' | relative_url }}" alt="float-right-min.png" class="img-thumbnail">
+</p>
+
+<p>
+    There is an issue using float left and right in pages as elements after float will overflow around it and one such way is to implement clearfix solution. A clearfix is a way for an element to automatically clear its child elements, 
+    so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally. Which is shown in the given example below.
+    The first example is without clearfix.
+    <img src="{{ 'assets/img/css-float/before-clearfix-min.png' | relative_url }}" alt="before-clearfix-min.png" class="img-thumbnail">
+</p>
+
+<p>
+    The following is after adding the following class in the element.
+    <pre>
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+    </pre>
+    <img src="{{ 'assets/img/css-float/clearfix-after-min.png' | relative_url }}" alt="clearfix-after-min.png" class="img-thumbnail">
+</p>
+
+<p>
+    However it is usally discouraged to use clearfix or floats to align elements on a webpage as there are other better alternatives such as <mark>display : inline-block</mark>
+    or <mark>flexbox</mark>. As these following CSS properties would align the element in a uniform spacing horizontally. But due to browser compatibility and support,
+    element alginments using float is still being used but slowly disappering.
+</p>
+
+<p>
+    But I would say in my opinion, the best alternative would be using the CSS Grid Framework as it is easier to work with and would be less of a hassle to calculate,
+    how much padding or 'space' is need to each element to fit into the given container. Plus such framework do already come in mobile and deskotp responsiveness. As Class
+    framework do have their own grid system classes, however if you're looking for just a grid class to be implemented in your css, <a href="https://simplegrid.io/">Simple Grid</a> 
+    would be your answer.
+</p>

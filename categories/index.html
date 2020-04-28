@@ -1,0 +1,20 @@
+---
+layout: page
+pagination:
+  enabled: true
+---
+
+<h2>Categories</h2>
+{% assign categories = (site.categories | sort: 0) %}
+<ul>
+  {% for category in categories %}
+  <li>
+    <a
+      href="{{ '/category/' | append :category[0] | relative_url }}"
+      title="{{ category[1].size }}"
+    >
+      <span class="category-list">{{category[0] }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

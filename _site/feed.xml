@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-28T14:41:35+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">jumpBangs</title><subtitle>A personal developer blog</subtitle><entry><title type="html">CSS Floats</title><link href="http://localhost:4000/development/2019/12/24/CSS-Float.html" rel="alternate" type="text/html" title="CSS Floats" /><published>2019-12-24T00:00:00+05:45</published><updated>2019-12-24T00:00:00+05:45</updated><id>http://localhost:4000/development/2019/12/24/CSS-Float</id><content type="html" xml:base="http://localhost:4000/development/2019/12/24/CSS-Float.html">&lt;p&gt;
+    &lt;strong&gt;FLOAT&lt;/strong&gt; is a CSS property that places an element on the left or right side of it's container. Which allows tex and inline elements to wrap around it. The property left and right usually tells the element on which side of the container
+    the following element must float on. This following CSS property was used before the implementation of flexbox which was introduced in CSS3.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The following reasons why I had looked into this was due to restriction that was given to me, during my internship where only the usage of CCS2 property was allowed. Thus, making me dive deep into floats as 
+    there were elements on the site pages where images had to be aligned side by side or in a similar format as CSS grid style. This would have been a walk in the park with the usage of CSS frameworks such as 
+    &lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; or &lt;a href=&quot;https://bulma.io/&quot;&gt;Bluma&lt;/a&gt; but usages of such framework was restricted hence the vinalla CSS route.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Before we start we need to know and understand how does applying &lt;mark&gt;&lt;em&gt;Float : right &amp; left&lt;/em&gt;&lt;/mark&gt;, the following figures would showcase how each property when applied would display the following element 
+    on a webpage. However for align items in the middle of the page, the CSS property given to that following element would be &lt;code&gt;margin: 0 auto&lt;/code&gt;.
+    &lt;img src=&quot;/assets/img/css-float/float-left-min.png&quot; alt=&quot;float-left-min.png&quot; class=&quot;img-thumbnail&quot;&gt;
+    &lt;img src=&quot;/assets/img/css-float/centre-align-min.png&quot; alt=&quot;centre-align-min.png&quot; class=&quot;img-thumbnail&quot;&gt;
+    &lt;img src=&quot;/assets/img/css-float/float-right-min.png&quot; alt=&quot;float-right-min.png&quot; class=&quot;img-thumbnail&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    There is an issue using float left and right in pages as elements after float will overflow around it and one such way is to implement clearfix solution. A clearfix is a way for an element to automatically clear its child elements, 
+    so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally. Which is shown in the given example below.
+    The first example is without clearfix.
+    &lt;img src=&quot;/assets/img/css-float/before-clearfix-min.png&quot; alt=&quot;before-clearfix-min.png&quot; class=&quot;img-thumbnail&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    The following is after adding the following class in the element.
+    &lt;pre&gt;
+        .clearfix::after {
+            content: &quot;&quot;;
+            clear: both;
+            display: table;
+          }
+    &lt;/pre&gt;
+    &lt;img src=&quot;/assets/img/css-float/clearfix-after-min.png&quot; alt=&quot;clearfix-after-min.png&quot; class=&quot;img-thumbnail&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    However it is usally discouraged to use clearfix or floats to align elements on a webpage as there are other better alternatives such as &lt;mark&gt;display : inline-block&lt;/mark&gt;
+    or &lt;mark&gt;flexbox&lt;/mark&gt;. As these following CSS properties would align the element in a uniform spacing horizontally. But due to browser compatibility and support,
+    element alginments using float is still being used but slowly disappering.
+&lt;/p&gt;
+
+&lt;p&gt;
+    But I would say in my opinion, the best alternative would be using the CSS Grid Framework as it is easier to work with and would be less of a hassle to calculate,
+    how much padding or 'space' is need to each element to fit into the given container. Plus such framework do already come in mobile and deskotp responsiveness. As Class
+    framework do have their own grid system classes, however if you're looking for just a grid class to be implemented in your css, &lt;a href=&quot;https://simplegrid.io/&quot;&gt;Simple Grid&lt;/a&gt; 
+    would be your answer.
+&lt;/p&gt;</content><author><name></name></author><category term="development" /><summary type="html">FLOAT is a CSS property that places an element on the left or right side of it's container. Which allows tex and inline elements to wrap around it. The property left and right usually tells the element on which side of the container the following element must float on. This following CSS property was used before the implementation of flexbox which was introduced in CSS3.</summary></entry><entry><title type="html">Migrating to Netlify from Gitlab Pages (Jekyll)</title><link href="http://localhost:4000/development/2019/08/16/Migrating-to-Netlify.html" rel="alternate" type="text/html" title="Migrating to Netlify from Gitlab Pages (Jekyll)" /><published>2019-08-16T00:00:00+05:45</published><updated>2019-08-16T00:00:00+05:45</updated><id>http://localhost:4000/development/2019/08/16/Migrating-to-Netlify</id><content type="html" xml:base="http://localhost:4000/development/2019/08/16/Migrating-to-Netlify.html">&lt;p class=&quot;lead&quot;&gt;
+    Decided to make a transtion from hosting on Gitlab Pages to Netlify to host my blog site. So what is &lt;a href=&quot;https://www.netlify.com&quot;&gt;Netlify&lt;/a&gt; and why did I made the jump ? Well long answer short it a static host site with easy delopyment interface
+    for your site. Plus it's
+    &lt;mark&gt;&lt;strong&gt;&lt;a href=&quot;https://www.netlify.com/pricing/&quot;&gt;&quot;FREE&quot;&lt;/a&gt;&lt;/mark&gt;
+    &lt;/strong&gt;, well for a single user that is listed on their site.
+&lt;/p&gt;
+
+&lt;h3&gt; Other options than Netlify ?&lt;/h2&gt;
+    &lt;p class=&quot;lead&quot;&gt;
+        As stated above, Netlify similar to Gitlab/Github pages but with other goodies included. There are alot of alternatives to hosting a static website such as :
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;https://zeit.co/&quot;&gt;Zeit&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://surge.sh/&quot;&gt;Surge&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        All these hosting sites have one common goal in purpose(*which I think) is to provide serverless web hosting. As the more traditional web hosting would require oneself to go through the hassle of buying a cloud server and configuring it by running apache
+        and web hosting tools. It would be a prefect way to learn web development but however for a simple static site or a blog it would be an overkill and too much trouble of going through such process.
+    &lt;/p&gt;
+
+    &lt;h3&gt; Advantages of Netlify ? &lt;/h3&gt;
+    &lt;p&gt;
+        Well for me the main reason why I decided to jump ship is due to speed I would say. As running my blog gitlab pages seemed feasible as it is a static web blog but it did take awhile to see the updates and changes. Furthermore, in the long run if I have
+        more blogs the more slower and less responsive the site would become. Another reason would be if was to change my site generator or want to implement it with anthoer language there would not be any issue as these are the following technologies
+        that Netlify supports at the &lt;a href=&quot;https://www.netlify.com/blog/2018/08/09/10-static-site-generators-and-popular-uses-for-them-in-2018/&quot;&gt;
+        moment&lt;/a&gt;. Plus it can directly pull your repo files of the sites from Github and Gitlab and deploy simultaneously as it connected to your repo. There is free SSL with Let's Encrypt integration with any sites that is being hosted.
+    &lt;/p&gt;
+
+    &lt;h3&gt; Disadvatges of Netlify ? &lt;/h3&gt;
+    &lt;p&gt;
+        I would say the main disadvatage of it would be the flexibility that it doesn't have over server based hosting sites. As server based sites you can using any web based framework or language that you desire and plus sites hosted on Netlify can only be
+        static as due to the short-coming of it being serverless. Like you can exceute a php scrpit on deployment but cannot do so when requesting a page. Other would be like the usage of forms to send emails has to done through using thier own form handler
+        but there are &lt;a href=&quot;https://www.netlify.com/docs/form-handling/&quot;&gt; documentation on how to do it&lt;/a&gt;.
+    &lt;/p&gt;
+
+    &lt;h3&gt; How do you Migrate to Netlify ?&lt;/h3&gt;
+    &lt;p&gt;
+        Netlify does come with CI/CD processes but at the time of me migrating from Gitlab Pages to Netlify, it didn't have or supported the
+        &lt;mark&gt;Bundler Version of 2.0.2&lt;/mark&gt; in which would have resulted in failed process of setting up enviroment and deployment of site. One work around is to bundled the jekyll project with a previous and stable version of bundler which is version
+        1.7.1 ( I recalled ).
+    &lt;/p&gt;
+    &lt;p&gt;
+        Aonther method to deploy the site is by using &lt;a href=&quot;https://www.netlify.com/docs/cli/&quot;&gt;Netlify CLI tools&lt;/a&gt;, the following site has documentations and step by step process on how to install and login into your netlify account via terminal.
+        &lt;mark&gt;(There is a requirement of installing npm in order to install the CLI tools).&lt;/mark&gt; In which first create a netlify site to connect to your gitlab page repo, once set it would run and fail as stated due to version number of the bundler.
+        At this point remember to rename your site as the site name is randomly generated. Once completed follow the following steps below:
+    &lt;/p&gt;
+    &lt;p&gt;
+        To install Netlify CLI tools run the following line in the terminal : &lt;kbd&gt;npm install netlify-cli -g&lt;/kbd&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        Run the following line to login into your Netlify account (this would store token in a json file) : &lt;kbd&gt;netlify
+        login&lt;/kbd&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        The following lines is to link your account to your project, clean your project, build a production based site and deploy it.
+        &lt;ul class=&quot;list-unstyled&quot;&gt;
+            &lt;li&gt;To link your project :&lt;kbd&gt;netlify link&lt;/kbd&gt;&lt;/li&gt;
+            &lt;li&gt;To clean your project :&lt;kbd&gt;jekyll clean&lt;/kbd&gt;&lt;/li&gt;
+            &lt;li&gt;To build a production env: &lt;kbd&gt;JEKYLL_ENV=production jekyll build&lt;/kbd&gt;&lt;/li&gt;
+            &lt;li&gt;To deploy to Netlify:&lt;kbd&gt;netlify deploy --prod&lt;/kbd&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        If the following process is successful, your website should be up and running on the Netlify site.
+    &lt;/p&gt;</content><author><name></name></author><category term="development" /><summary type="html">Decided to make a transtion from hosting on Gitlab Pages to Netlify to host my blog site. So what is Netlify and why did I made the jump ? Well long answer short it a static host site with easy delopyment interface for your site. Plus it's &quot;FREE&quot; , well for a single user that is listed on their site.</summary></entry><entry><title type="html">Setting up Gitlab page (Jekyll)</title><link href="http://localhost:4000/development/2019/08/13/Setting-up-gitlab-pages.html" rel="alternate" type="text/html" title="Setting up Gitlab page (Jekyll)" /><published>2019-08-13T00:00:00+05:45</published><updated>2019-08-13T00:00:00+05:45</updated><id>http://localhost:4000/development/2019/08/13/Setting-up-gitlab-pages</id><content type="html" xml:base="http://localhost:4000/development/2019/08/13/Setting-up-gitlab-pages.html">&lt;p class=&quot;lead&quot;&gt; Setting up gitlab page is pretty straight forward and there is a brief &lt;a href=&quot;https://docs.gitlab.com/ee/user/project/pages/&quot;&gt;guide&lt;/a&gt; on how to get started and how setup. Granted it would have been easier to setup using the template, however what
+    if you wanted to use a custom theme template to setup a gitlab page ?. Thus this is a step by step process on how to do so in breif.&lt;/p&gt;
+&lt;h3&gt; Downloading and Setting up Jekyll&lt;/h3&gt;
+&lt;p class=&quot;lead&quot;&gt; Installing Jekyll is simple and it requires Ruby and other dependencies in which there is detailed installtion guide on their &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;webpage&lt;/a&gt;. As my current system was running on linux, I
+        went over the &lt;a href=&quot;https://jekyllrb.com/docs/installation/ubuntu/&quot;&gt;ubuntu linux guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+    Once installed, and to create a site just run the following setup line in your terminal :&lt;kbd&gt;jekyll new
+    name_of_your_site&lt;/kbd&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    To run the site locally just run the following line in the terminal :&lt;kbd&gt;jekyll serve&lt;/kbd&gt; or &lt;kbd&gt;jekyll s&lt;/kbd&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    Your new site would be running in the following site &lt;samp&gt;127.0.0.1:4000/{name_of_your_site}&lt;/samp&gt;; which you can access it via any web-browsers. However this is running locally so any changes made would only be done locally.
+&lt;/p&gt;
+&lt;p&gt;
+    This is the overview of a newly build jekyll site.
+    &lt;pre&gt;
+		site
+		├── 404.html
+		├── about.md
+		├── _config.yml
+		├── Gemfile
+		├── Gemfile.lock
+		├── index.md
+		└── _posts
+		└── 2019-08-13-welcome-to-jekyll.markdown
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;h3&gt; Installing Plugins &lt;/h3&gt;
+&lt;p&gt;
+    In order to get the full usage of Jekyll you can install plugins in which would enable you to customise your site/page to whatever your needs and requirements. There &lt;a href=&quot;https://jekyllrb.com/docs/plugins/installation/&quot;&gt;3
+    ways to install plugins &lt;/a&gt;, in which I used option 2 and I could transfer the same values into
+    &lt;mark&gt;.gitlab-ci.yml&lt;/mark&gt; ( this is your &quot;config&quot; file that runs in gitlab to set up the enviroment for the following page.).
+&lt;/p&gt;
+&lt;h3&gt; Setting up .gitlab-ci-ymi &lt;/h3&gt;
+&lt;p&gt;
+    To setup the following yaml file, you can either clone your gitpage repo that you have created from scratch or just add the following file
+    &lt;mark&gt;.gitlab-ci.yml&lt;/mark&gt; into your site directory/folder.
+&lt;/p&gt;
+&lt;p&gt;
+    The next step depends on the ruby version that is being used for this project, at the time of creation of my following ruby and bundler version are as following :
+    &lt;pre&gt;
+		ruby 2.5.1p57 (2018-03-29 revision 63029)
+		Bundler version 2.0.2
+	&lt;/pre&gt; To check your ruby and bundler version run the following line in your terminal respectively.
+    &lt;br&gt; For ruby version :
+    &lt;kbd&gt;
+    ruby -v
+&lt;/kbd&gt;
+    &lt;br&gt; For Bundler version :
+    &lt;kbd&gt;
+    bundler -v
+&lt;/kbd&gt;
+    &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    This is my .gitlab-ci.yml confi at the following time and it may change in the future due to adding and updating the versions and plugins.
+    &lt;pre&gt;
+		image: ruby:2.5
+		before_script:
+			- gem install jekyll-feed
+			- gem install jekyll-seo-tag
+			- gem install tzinfo
+			- gem install jekyll-paginate-v2
+
+		pages:
+			script:
+				- gem install jekyll bundler
+				- bundle exec jekyll build -d public/
+			artifacts:
+				paths:
+				- public
+			only:
+				- master
+	&lt;/pre&gt; Once the following file has been saved, you can git add and push it to the gitlab repo of your gitlab page. Once it is successful, head over to your gitlab page which is
+    &lt;samp&gt;
+    username.gitlab.io/your_repo_name.&lt;/samp&gt; If everything went well, it should load up your gitlab page on that url.
+&lt;/p&gt;
+&lt;h3&gt;Trouble-shooting&lt;/h3&gt;
+&lt;p&gt;If accessing the gitlab page sends and 404 error page, head over yto your repo and check the status of your pipepline. Which is indicated on your repo in the following image:
+    &lt;img src=&quot;/assets/img/gitlab-pages/commit-pass.png&quot; alt=&quot;commit-pass.png&quot; class=&quot;img-thumbnail&quot;&gt;
+    &lt;br&gt; In which you can see what was the issue for your error by heading over to your job page as shown in the image:&lt;img src=&quot;/assets/img/gitlab-pages/gitlab-dashboard.png&quot; alt=&quot;gitlab-dashboard.png&quot; class=&quot;mx-auto d-block img-thumbnail&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    Once on the job page, click on the following job that had failed and look at what was the error caused by, in which for my case it was due to a missing plugin that I had not added in
+    &lt;mark&gt;.gitlab-ci.yml&lt;/mark&gt; file.
+    &lt;img src=&quot;/assets/img/gitlab-pages/pipeline-error.png&quot; alt=&quot;pipeline-error.png&quot; class=&quot;img-thumbnail&quot;&gt;
+&lt;/p&gt;</content><author><name></name></author><category term="development" /><summary type="html">Setting up gitlab page is pretty straight forward and there is a brief guide on how to get started and how setup. Granted it would have been easier to setup using the template, however what if you wanted to use a custom theme template to setup a gitlab page ?. Thus this is a step by step process on how to do so in breif. Downloading and Setting up Jekyll Installing Jekyll is simple and it requires Ruby and other dependencies in which there is detailed installtion guide on their webpage. As my current system was running on linux, I went over the ubuntu linux guide. Once installed, and to create a site just run the following setup line in your terminal :jekyll new name_of_your_site To run the site locally just run the following line in the terminal :jekyll serve or jekyll s Your new site would be running in the following site 127.0.0.1:4000/{name_of_your_site}; which you can access it via any web-browsers. However this is running locally so any changes made would only be done locally. This is the overview of a newly build jekyll site. site ├── 404.html ├── about.md ├── _config.yml ├── Gemfile ├── Gemfile.lock ├── index.md └── _posts └── 2019-08-13-welcome-to-jekyll.markdown Installing Plugins In order to get the full usage of Jekyll you can install plugins in which would enable you to customise your site/page to whatever your needs and requirements. There 3 ways to install plugins , in which I used option 2 and I could transfer the same values into .gitlab-ci.yml ( this is your &quot;config&quot; file that runs in gitlab to set up the enviroment for the following page.). Setting up .gitlab-ci-ymi To setup the following yaml file, you can either clone your gitpage repo that you have created from scratch or just add the following file .gitlab-ci.yml into your site directory/folder. The next step depends on the ruby version that is being used for this project, at the time of creation of my following ruby and bundler version are as following : ruby 2.5.1p57 (2018-03-29 revision 63029) Bundler version 2.0.2 To check your ruby and bundler version run the following line in your terminal respectively. For ruby version : ruby -v For Bundler version : bundler -v This is my .gitlab-ci.yml confi at the following time and it may change in the future due to adding and updating the versions and plugins. image: ruby:2.5 before_script: - gem install jekyll-feed - gem install jekyll-seo-tag - gem install tzinfo - gem install jekyll-paginate-v2</summary></entry></feed>

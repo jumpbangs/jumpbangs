@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {%- include styles.html -%}
+  </head>
+
+  <body>
+    <div class="container">
+        <!-- Back to top button -->
+        <span id="back-to-top" onclick="scrollToTop()" class="back-top-btn terminal-blink">^</span>
+        {%- include header.html -%}
+        {%- include navbar.html -%}
+        {{ content }}
+        {%- include footer.html -%}
+        {%- include scripts.html -%}
+    </div>
+   
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Skeleton CSS -->
+
+<link rel="stylesheet" type="text/css" href="/assets/css/skeleton.css ">
+<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css ">
+<link rel="stylesheet" type="text/css" href="/assets/css/custom.css "></head>
+
+  <body>
+    <div class="container">
+        <!-- Back to top button -->
+        <span id="back-to-top" onclick="scrollToTop()" class="back-top-btn terminal-blink">^</span><div class="header header-box">
+  <p class="terminal-header">
+    <a href="/"> $ jumpbangs<span class="terminal-blink">_</span> </a>
+  </p>
+</div>
+<div class="row navbar">
+  <div class="three columns">
+    <a href=/categories class="navbar-link">Categories</a>
+  </div>
+  <div class="three columns">
+    <a href="/projects"  class="navbar-link">Projects</a>
+  </div>
+  <div class="three columns">
+    <a href="/about" class="navbar-link">About </a>
+  </div>  
+  <div class="three columns">
+    <a href="/me" class="navbar-link">Me </a>
+  </div>
+</div>
+<div class="post-body">
+  <h1>Setting up Gitlab page (Jekyll)</h1>
+  <p>
+    <p class="lead"> Setting up gitlab page is pretty straight forward and there is a brief <a href="https://docs.gitlab.com/ee/user/project/pages/">guide</a> on how to get started and how setup. Granted it would have been easier to setup using the template, however what
+    if you wanted to use a custom theme template to setup a gitlab page ?. Thus this is a step by step process on how to do so in breif.</p>
+<h3> Downloading and Setting up Jekyll</h3>
+<p class="lead"> Installing Jekyll is simple and it requires Ruby and other dependencies in which there is detailed installtion guide on their <a href="https://jekyllrb.com/docs/installation/">webpage</a>. As my current system was running on linux, I
+        went over the <a href="https://jekyllrb.com/docs/installation/ubuntu/">ubuntu linux guide</a>.</p>
+<p>
+    Once installed, and to create a site just run the following setup line in your terminal :<kbd>jekyll new
+    name_of_your_site</kbd>
+</p>
+<p>
+    To run the site locally just run the following line in the terminal :<kbd>jekyll serve</kbd> or <kbd>jekyll s</kbd>
+</p>
+<p>
+    Your new site would be running in the following site <samp>127.0.0.1:4000/{name_of_your_site}</samp>; which you can access it via any web-browsers. However this is running locally so any changes made would only be done locally.
+</p>
+<p>
+    This is the overview of a newly build jekyll site.
+    <pre>
+		site
+		├── 404.html
+		├── about.md
+		├── _config.yml
+		├── Gemfile
+		├── Gemfile.lock
+		├── index.md
+		└── _posts
+		└── 2019-08-13-welcome-to-jekyll.markdown
+</pre>
+</p>
+<h3> Installing Plugins </h3>
+<p>
+    In order to get the full usage of Jekyll you can install plugins in which would enable you to customise your site/page to whatever your needs and requirements. There <a href="https://jekyllrb.com/docs/plugins/installation/">3
+    ways to install plugins </a>, in which I used option 2 and I could transfer the same values into
+    <mark>.gitlab-ci.yml</mark> ( this is your "config" file that runs in gitlab to set up the enviroment for the following page.).
+</p>
+<h3> Setting up .gitlab-ci-ymi </h3>
+<p>
+    To setup the following yaml file, you can either clone your gitpage repo that you have created from scratch or just add the following file
+    <mark>.gitlab-ci.yml</mark> into your site directory/folder.
+</p>
+<p>
+    The next step depends on the ruby version that is being used for this project, at the time of creation of my following ruby and bundler version are as following :
+    <pre>
+		ruby 2.5.1p57 (2018-03-29 revision 63029)
+		Bundler version 2.0.2
+	</pre> To check your ruby and bundler version run the following line in your terminal respectively.
+    <br> For ruby version :
+    <kbd>
+    ruby -v
+</kbd>
+    <br> For Bundler version :
+    <kbd>
+    bundler -v
+</kbd>
+    <br>
+</p>
+<p>
+    This is my .gitlab-ci.yml confi at the following time and it may change in the future due to adding and updating the versions and plugins.
+    <pre>
+		image: ruby:2.5
+		before_script:
+			- gem install jekyll-feed
+			- gem install jekyll-seo-tag
+			- gem install tzinfo
+			- gem install jekyll-paginate-v2
+
+		pages:
+			script:
+				- gem install jekyll bundler
+				- bundle exec jekyll build -d public/
+			artifacts:
+				paths:
+				- public
+			only:
+				- master
+	</pre> Once the following file has been saved, you can git add and push it to the gitlab repo of your gitlab page. Once it is successful, head over to your gitlab page which is
+    <samp>
+    username.gitlab.io/your_repo_name.</samp> If everything went well, it should load up your gitlab page on that url.
+</p>
+<h3>Trouble-shooting</h3>
+<p>If accessing the gitlab page sends and 404 error page, head over yto your repo and check the status of your pipepline. Which is indicated on your repo in the following image:
+    <img src="/assets/img/gitlab-pages/commit-pass.png" alt="commit-pass.png" class="img-thumbnail">
+    <br> In which you can see what was the issue for your error by heading over to your job page as shown in the image:<img src="/assets/img/gitlab-pages/gitlab-dashboard.png" alt="gitlab-dashboard.png" class="mx-auto d-block img-thumbnail">
+</p>
+<p>
+    Once on the job page, click on the following job that had failed and look at what was the error caused by, in which for my case it was due to a missing plugin that I had not added in
+    <mark>.gitlab-ci.yml</mark> file.
+    <img src="/assets/img/gitlab-pages/pipeline-error.png" alt="pipeline-error.png" class="img-thumbnail">
+</p>
+  </p>
+</div>
+<footer class="footer-section">
+  <div class="row">
+    <div class="four columns"></div>
+    <div class="eight columns">
+      <ul>
+        <li>
+          <a href="#">Email</a>
+        </li>
+        <li>
+          <a href="#">Github</a>
+        </li>
+        <li>
+          <a href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- Custom Javascript-->
+<script type="text/javascript" src="/assets/js/script.js"></script></div>
+   
+  </body>
+</html>

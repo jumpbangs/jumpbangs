@@ -1,0 +1,17 @@
+---
+layout: page
+title: Development
+pagination: 
+  enabled: true
+  category: development
+---
+
+<h3> The following post found in this category :</h3>
+{% for post in site.posts %}
+<ul>
+    {% if post.categories contains "development" %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endif %}
+</ul>
+{% endfor %}
+

@@ -1,0 +1,122 @@
+/* Header CSS */
+
+.header-box {
+    border-bottom: 2px #fff dashed;
+  }
+  
+  .terminal-header {
+    -webkit-animation: type 0.5s 4.25s steps(20, end) forwards;
+    -moz-animation: type 0.5s 4.25s steps(20, end) forwards;
+    -o-animation: type 0.5s 4.25s steps(20, end) forwards;
+    animation: type 0.5s 4.25s steps(20, end) forwards;
+  }
+  
+  .terminal-header a {
+    text-decoration: none;
+    font-size: x-large;
+    cursor: pointer;
+    color: #cdee69;
+  }
+  
+  .terminal-blink {
+    -webkit-animation: blink 1s 2s infinite;
+    -moz-animation: blink 1s 2s infinite;
+    -o-animation: blink 1s 2s infinite;
+    animation: blink 1s 2s infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-o-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    to {
+      width: 17em;
+    }
+  }
+  
+  @-moz-keyframes type {
+    to {
+      width: 17em;
+    }
+  }
+  
+  @-o-keyframes type {
+    to {
+      width: 17em;
+    }
+  }
+  
+  @keyframes type {
+    to {
+      width: 17em;
+    }
+  }

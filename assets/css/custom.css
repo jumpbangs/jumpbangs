@@ -1,0 +1,43 @@
+@import "./terminal-theme/header.css";
+@import "./terminal-theme/navbar.css";
+@import "./terminal-theme/section-post.css";
+@import "./terminal-theme/section-me.css";
+@import "./terminal-theme/footer.css";
+
+/* Background */
+
+body {
+  background-color: #151515;
+  padding: 10px;
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Back to top btn */
+.back-top-btn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  /* background-color: red; Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  /* border-radius: 10px; Rounded corners */
+  font-size: 200%;
+}
+
+
+
