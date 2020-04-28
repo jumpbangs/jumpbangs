@@ -5,7 +5,6 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/jumpbangs/jumpbangs" }
 
 # gem "rails"
-
 # gem "jekyll"
 # gem 'github-pages'
 # gem 'jekyll-paginate'
