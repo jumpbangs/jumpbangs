@@ -17,7 +17,7 @@ title: jumpBangs
 email: amitchongbang@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A personal developer blog
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jumpbangs" # the subpath of your site, e.g. /blog
 url: "https://jumpbangs.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Github repo
