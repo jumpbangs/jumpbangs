@@ -44,7 +44,13 @@
 
 <br/>
 
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumpbangs&layout=compact" width="50%">
- ![Stats](./profile/stats.svg)
-</p>
+<table style="border: none;">
+<tr>
+<td style="border: none;" align="center">
+  <img src="./profile/stats.svg" alt="Stats" />
+</td>
+<td style="border: none;" align="center">
+  <img src="./profile/top-langs.svg" alt="Top Languages" />
+</td>
+</tr>
+</table>
