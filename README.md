@@ -46,4 +46,5 @@
 
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumpbangs&layout=compact" width="50%">
+ ![Stats](./profile/stats.svg)
 </p>
